@@ -1,6 +1,52 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar
+{
+  position: absolute;
+  width: 3rem;
+  background-color: #e1e1e1;
+  padding: .5rem;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.sidebar_icon
+{
+  color: #b1b1b1;
+  width: 2.8rem!important;
+  height: 2.8rem!important;
+}
+
+.products
+{
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  position: relative;
+  left: 4rem;
+  padding: .5rem;
+  width: calc(100% - 5rem);
+}
+
+.product
+{
+  width: calc(100%/3);
+  transform: scale(1.0);
+  border-radius: 6px;
+  background-color: #d1d1d1;
+  padding: 0.5rem;
+}
+
+.product:hover
+{
+  transform: scale(1.05);
 }

@@ -7,17 +7,22 @@ import {
     Link,
 } from "react-router-dom"
 
-const UserContext = React.createContext();
+import Main from './components/main.jsx'
+
 
 function render()
 {
     ReactDOM.render(
-        <UserContext.Provider>
-            <Router>
-                
-            </Router>
-        </UserContext.Provider>
-    );
+        <>
+        <Router> 
+            <Switch>
+                <Route path="/main_window">
+                    <Main/>
+                </Route>
+            </Switch>
+        </Router>
+        </>
+    , document.getElementById('root'));
 }
 
 render();

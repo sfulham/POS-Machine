@@ -6,7 +6,10 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
   app.quit();
 }
 
+console.log(MAIN_WINDOW_WEBPACK_ENTRY)
+
 const createWindow = () => {
+  console.log(MAIN_WINDOW_WEBPACK_ENTRY)
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
@@ -26,6 +29,7 @@ app.on('ready', createWindow);
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
+  console.log(MAIN_WINDOW_WEBPACK_ENTRY)
   app.quit();
 });
 
